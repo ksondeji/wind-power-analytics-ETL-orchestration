@@ -1,0 +1,101 @@
+table FactWindPower
+	lineageTag: 04993f2f-258b-4ec1-a7f4-4e10ebbe2329
+	sourceLineageTag: [dbo].[FactWindPower]
+
+	column production_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0baee47f-2e53-407f-8eed-56061f732ca3
+		sourceLineageTag: production_id
+		summarizeBy: sum
+		sourceColumn: production_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_id
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: d364c152-6ec1-4e05-8f3c-c841a77e31f2
+		sourceLineageTag: date_id
+		summarizeBy: none
+		sourceColumn: date_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column time_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 798c52ac-54e7-487b-a06b-a396f275ff2c
+		sourceLineageTag: time_id
+		summarizeBy: none
+		sourceColumn: time_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column turbine_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 479f8e0e-0f01-4358-bd6e-d4f243cf156a
+		sourceLineageTag: turbine_id
+		summarizeBy: none
+		sourceColumn: turbine_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column status_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 14593f9d-133f-45f2-a02c-631f35176319
+		sourceLineageTag: status_id
+		summarizeBy: none
+		sourceColumn: status_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column wind_direction
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c6e6e159-f5e1-4a09-956e-7e749e5d64a7
+		sourceLineageTag: wind_direction
+		summarizeBy: none
+		sourceColumn: wind_direction
+
+		annotation SummarizationSetBy = Automatic
+
+	column wind_speed
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 05caa710-0004-4b51-8fac-656f591d9442
+		sourceLineageTag: wind_speed
+		summarizeBy: sum
+		sourceColumn: wind_speed
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column energy_produced
+		dataType: double
+		sourceProviderType: float
+		lineageTag: bc61cf33-e371-46a3-9add-1b34122aa08f
+		sourceLineageTag: energy_produced
+		summarizeBy: sum
+		sourceColumn: energy_produced
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition FactWindPower = entity
+		mode: directLake
+		source
+			entityName: FactWindPower
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

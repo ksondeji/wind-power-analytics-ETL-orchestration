@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "NB_Silver_To_Gold_Transformation_Python"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c392d1f1-bf8c-8619-4abb-dbfa7fdce83a"
+  }
+}
