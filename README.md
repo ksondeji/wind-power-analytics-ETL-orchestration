@@ -1,6 +1,6 @@
 # Fabric Wind Power Analytics
 
-Dans le cadre de ce projet, nous developerons une solutoion end-to-end à partir d'une capacité Microsoft Fabric en utilisant l'architecture Medallion classique (Bronze → Silver → Gold) avec des données réelles.
+Dans le cadre de ce projet, nous developerons une solution end-to-end à partir d'une capacité Microsoft Fabric en utilisant l'architecture Medallion classique (Bronze → Silver → Gold) avec des données réelles.
 L'objectif est de s'exercer à mettre en œuvre des modèles courants et reproductibles et complètement automatisés de plateformes de données fréquemment utilisés en entreprise :
 l'ingestion, la transformation, la modélisation, le reporting et l'orchestration.
 
